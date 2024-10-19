@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wild Safari</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/images/background.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .contact-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 50px;
+            width: 70%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        form .full-width {
+            grid-column: 1 / 3;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            outline: none;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            grid-column: 1 / 3;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .contact-info div {
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        @media(max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Success message styling */
+        #success-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Whether you have a question about our safaris, pricing, or anything else, feel free to reach out.</p>
+    
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" class="full-width" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div id="success-message">Thank you! Your message has been sent successfully.</div>
+
+    <div class="contact-info">
+        <div>📍 123 Safari Road, Wild Nature Reserve</div>
+        <div>📞 <a href="tel:+123456789">+1 234 567 89</a></div>
+        <div>📧 <a href="mailto:info@wildsafari.com">info@wildsafari.com</a></div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle form submission and show success message
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Display the success message
+        successMessage.style.display = 'block';
+
+        // Clear the form fields
+        form.reset();
+
+        // Optionally hide the success message after a few seconds
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000); // Hides the message after 5 seconds
+    });
+</script>
+
+</body>
+</html>

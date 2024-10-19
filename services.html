@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Wild Safari Management</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('safari-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: #f0a500;
+            font-size: 40px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        .services-section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: #f0a500;
+            letter-spacing: 1px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #f0a500;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #f0a500;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffb347;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav ul li {
+                margin-right: 10px;
+            }
+
+            .services-section h2 {
+                font-size: 36px;
+            }
+
+            .service-card {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services-section">
+        <h2>Explore Our Exclusive Safari Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <h3>Guided Safari Tours</h3>
+                <p>Our expert guides will take you on an adventure through the wilderness, offering you insights and unforgettable moments with the wildlife.</p>
+                <a href="signup_login.html" class="btn">Book Now</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Luxury Camping</h3>
+                <p>Experience the ultimate comfort in the heart of nature. Our luxury camping offers you a cozy retreat after a thrilling day on safari.</p>
+                <a href="signup_login.html" class="btn">Book Now</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Wildlife Photography Tours</h3>
+                <p>Join our specialized photography tours and capture stunning wildlife moments with professional guidance in the best spots.</p>
+                <a href="signup_login.html" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Wild Safari Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
